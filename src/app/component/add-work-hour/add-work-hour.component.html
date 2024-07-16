@@ -1,0 +1,41 @@
+<form [formGroup]="workHourForm">
+  <div class="mb-3">
+    <label for="starterTime" class="form-label">Starter Time</label>
+    <input
+      type="time"
+      id="starterTime"
+      class="form-control"
+      formControlName="starterTime"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="starterTime" class="form-label">End Time</label>
+    <input
+      type="time"
+      id="endTime"
+      class="form-control"
+      formControlName="endTime"
+    />
+  </div>
+  <p-button
+    (onClick)="logout()"
+    label="Logout"
+    text="true"
+    raised="true"
+    severity="danger"
+  ></p-button>
+  <p-button
+    (onClick)="saveWorkHour()"
+    label="Save"
+    text="true"
+    raised="true"
+    severity="info"
+  ></p-button>
+  <p-button
+    (onClick)="navigateStatistic()"
+    label="Total Work Hour"
+    text="true"
+    raised="true"
+    severity="success"
+  ></p-button>
+</form>
